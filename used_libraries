@@ -1,4 +1,6 @@
-To carry out this project, several tools were needed, such as libraries, all of which are free to use, as indicated below:
+To carry out this project, several tools were needed, such as libraries, all of which are free to use, as indicated below (ALL LIBRARIES ARE FOR WINDOWS):
+
+
 
 (computer vision libraries):
 Mediapipe: The Mediapipe library is a powerful tool for analysis and processing of data related to computer vision projects. It offers a variety of pre-built solutions for tasks such as hand detection, facial detection, pose tracking, and much more.
@@ -6,11 +8,18 @@ cv2 (OpenCV): The cv2 library, also known as OpenCV (Open Source Computer Vision
 
 (mathematical libraries):
 (numpy): The numpy library is essential for efficient manipulation of multidimensional arrays and numerical calculations in the Python language. It offers functions to perform mathematical operations on arrays, broadcasting, proportion manipulation, and much more.
-(time): The time module provides functions related to time and timers in Python.
 
 (operating system interface and control libraries):
-(uuid): The uuid module allows the generation of universally unique identifiers (UUIDs). These identifiers are used to assign a unique value to objects or entities, being useful in various applications such as object tracking, unique device identification, and authentication systems.
-(os): The os module provides a way to interact with the underlying operating system, allowing the creation, deletion, and manipulation of files and directories, as well as the execution of system commands.
-(pyautogui): The pyautogui library offers functions to automate interactions with the Graphical User Interface (GUI). With it, you can simulate mouse clicks, key presses, cursor movements, and other input actions.
 (pycaw): The pycaw library allows interaction with the Windows API for audio control. It's useful for adjusting volume settings of audio devices such as speakers and microphones, as well as for obtaining information about available audio devices.
+
+(how to install?):
+Open a terminal or command prompt ("windows") and run the following command:
+
+(Mediapipe): pip install mediapipe
+(Opencv): pip install opencv-python
+(nump): pip install numpy
+(pycaw): pip install pycaw
+
+
+
 
