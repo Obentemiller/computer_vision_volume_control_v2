@@ -1,0 +1,53 @@
+The code utilizes the mediapipe library to perform real-time hand tracking using the camera of a device. The main objective of the code is to control the audio volume of the operating system through hand gestures. I will explain the code's functionality step by step:
+
+1-Library Imports:
+
+mediapipe is used to track hands and detect their positions.
+cv2 (OpenCV) is used to capture video input from the camera and display images.
+numpy is used for numerical operations, such as matrix manipulation.
+uuid generates a universally unique identifier.
+os provides an interface between the program and the operating system.
+pyautogui allows controlling the computer's mouse and keyboard (spoiler function for the next version!).
+pycaw.pycaw is used to control audio volume.
+time is used for pauses and time control during execution.
+
+2-Variables and Settings:
+
+Various global variables and constants are defined to adjust the program's behavior, such as maximum and minimum volume values, distance, etc.
+
+3-Functions:
+
+volumecontrol(volume): This function is responsible for adjusting the system's audio volume. It uses the pycaw library to interact with active audio sessions and adjust the volume.
+
+distCal(point1, point2): Calculates the Euclidean distance between two 2D points, performing a norm operation.
+
+are_fingers_touching(thumb_tip, finger_tip, threshold): Checks if the fingertips are touching, based on a threshold distance.
+
+mapvol(dist): Maps the distance between the index and thumb fingers to a volume value between 0 and 1, considering the defined limits.
+
+mapvoltxt(dist): Performs a similar mapping as above but returns a formatted string to display the results on the image.
+
+4-Hand Tracking Configuration:
+
+The code initializes hand tracking using mp_hands.Hands with specific detection settings.
+
+5-Main Loop:
+
+The program enters an infinite loop that captures frames from the camera.
+Captured frames are converted to the appropriate format for mediapipe functions.
+Tracking results are processed to identify hand and finger positions.
+Points and connections are drawn on the detected hands in the image, along with coloring.
+Positions of thumb, index, and middle finger tips are calculated, along with other relevant positions for returning in functions.
+
+6-Volume and State Control:
+
+The distance between the thumb and index finger tips is used to adjust the volume.
+If the thumb and pinky fingers are touching, the control state is toggled.
+If the state is true, the control is activated, and the volume is adjusted.
+The state is displayed in the top-left corner of the image.
+
+7-Display and Termination:
+
+The processed frame with tracking and volume control information is displayed directly on the screen.
+The program can be terminated by pressing the 'q' key.
+Please note that some library names and terminology might need to be adapted to match the actual terminology used in the code or documentation.
